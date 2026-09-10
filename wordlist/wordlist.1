@@ -1,0 +1,24 @@
+TH wordlist 1 "Writer's ScriptBench"
+.SH Name
+wordlist \- output each word on its own line
+.SH Description
+The
+.I wordlist
+utility converts its input to lowercase,
+strips all punctuation,
+then outputs each word on its own line.
+.
+.SH "Differences from WWB"
+The
+.I wordlist
+utility replaces the functionality of
+.CW "deroff -w" ,
+and extends it to normalize words.
+So instead of using the WWB command
+.CW "deroff -w"
+.I file ,
+you instead use
+.CW deroff
+.I file
+|
+.CW wordlist .

@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# Use groff's -mm diagnostics to check validity
+
+which -s groff || (echo This version of checkmm requires Groff. ; exit 1)
+groff -mm -b -ww -z $@

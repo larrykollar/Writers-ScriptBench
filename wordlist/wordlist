@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# wordlist: Given a text file, output each word on its own line.
+#           Strip punctuation, convert all words to lowercase.
+#           Delete blank lines. Requires GNU sed.
+
+sed -E -e 's/^$//' -e 's/[[:punct:]]//g' | \
+  awk '{s=tolower($0); sub(/^ +/,"",s); gsub(/ +/,"\n",s); print s; next}'
