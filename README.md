@@ -1,2 +1,47 @@
 # Writers-ScriptBench
 Scripts to mostly duplicate the function of missing or lost Writer's Workbench (WWB) utilities.
+A couple of new scripts replace or extend functionality.
+
+Some WWB utilities were rewritten from scratch with public licenses.
+Others have original source available on TUHS, with uncertain licensing.
+A few come from the BSD side.
+Here's the list of utilities I'm aware of
+(excluding formatters, macros, preprocessors, and postprocessors;
+those are all available as released source or ground-up rewrites, or both).
+
+| Name | Status | Notes |
+|-----|-----|-----|
+| abst | unknown | Abstractness evaluation; ArtsEngine or WordTangible might be replacements |
+| acro | Here (soon) | Acronym check, replacement awk script coming |
+| checkmm | **Here** | Requires groff |
+| deroff | Here (soon) | -w option not supported, pipe to *wordlist* instead |
+| dictadd | unknown | adds to diction & spell dictionaries |
+| diction | Available from [GNU diction](https://www.gnu.org/software/diction/) | Improved but no dictadd |
+| double | *unneeded*, GNU diction does this | Checks for double words |
+| explain | 4.1BSD source available | explains diction's heartburn with certain words |
+| findbe | unknown | "looks for syntax that may be difficult to understand" |
+| morestyle | unknown | "abstract" words, word diversity, negative constructions |
+| org | unknown | prints first & last sentence of each paragraph |
+| punct | unknown | punctuation check (commas, periods in/out of quotes |
+| reuseprep | Here (soon) | **New**, preps text for reuse analysis |
+| sexist | unknown | Looks for sexist words and phrases |
+| spell | *unneeded* | Use aspell |
+| spelladd | *unneeded* | aspell allows adding on the fly |
+| spellwwb | *unneeded* | aspell has this functionality |
+| splitrules | *unneeded* | Finds split infinitives, we don't worry about those now |
+| style | Bundled with GNU diction | Improved |
+| syl | *unneeded* | Average number of syllables per word (supported in GNU style) |
+| wordlist | **Here** | **New**, replaces -w option in WSB deroff |
+
+Of all these, deroff is the most frustrating.
+GNU has a version, but it produces garbled output.
+A version on GitHub compiles (with some help) but produces **no** output.
+So the WSB version calls nroff (turning off hyphenation on the command line)
+to strip the markup.
+
+Most of the WSB utilities work a little differently
+from their WWB counterparts.
+Check the manual page
+for each utility, especially if you're familiar with the original
+and want to see what's different.
+
