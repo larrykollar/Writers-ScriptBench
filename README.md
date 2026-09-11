@@ -18,9 +18,9 @@ those are all available as released source or ground-up rewrites, or both).
 | dictadd | unknown | Adds to diction & spell dictionaries |
 | diction | Available from [GNU diction](https://www.gnu.org/software/diction/) | Improved but no dictadd |
 | double | *unneeded*, GNU diction does this | Checks for double words |
-| explain | 4.1BSD source available | Explains diction's heartburn with certain phrases |
+| explain | [4.3BSD source available](https://www.retro11.de/ouxr/43bsd/usr/src/usr.bin/diction/) | Explains diction's heartburn with certain words |
 | findbe | unknown | "Looks for syntax that may be difficult to understand" |
-| hyphen | Here (soon) | Shows hyphenated words from nroff output |
+| hyphen | **Here** | Shows hyphenated words in *nroff* output |
 | morestyle | unknown | "Abstract" words, word diversity, negative constructions |
 | org | unknown | Prints first & last sentence of each paragraph |
 | punct | unknown | Punctuation check (commas, periods in/out of quotes |
