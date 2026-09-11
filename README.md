@@ -1,4 +1,4 @@
-# Writers-ScriptBench
+# Writer's ScriptBench
 Scripts to mostly duplicate the function of missing or lost Writer's Workbench (WWB) utilities.
 A couple of new scripts replace or extend functionality.
 
