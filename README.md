@@ -14,7 +14,7 @@ those are all available as released source or ground-up rewrites, or both).
 | abst | unknown | Abstractness evaluation; ArtsEngine or WordTangible might be replacements |
 | acro | Here (soon) | Acronym check, replacement awk script coming |
 | checkmm | **Here** | Requires groff |
-| deroff | Here (soon) | -w option not supported, pipe to *wordlist* instead |
+| deroff | **Here** | -w option not supported, pipe to *wordlist* instead |
 | dictadd | unknown | adds to diction & spell dictionaries |
 | diction | Available from [GNU diction](https://www.gnu.org/software/diction/) | Improved but no dictadd |
 | double | *unneeded*, GNU diction does this | Checks for double words |
@@ -23,7 +23,7 @@ those are all available as released source or ground-up rewrites, or both).
 | morestyle | unknown | "abstract" words, word diversity, negative constructions |
 | org | unknown | prints first & last sentence of each paragraph |
 | punct | unknown | punctuation check (commas, periods in/out of quotes |
-| reuseprep | Here (soon) | **New**, preps text for reuse analysis |
+| reuseprep | Here (soon) | **New**, preps text for [reuse analysis](https://github.com/larrykollar/reuse_analyzer) |
 | sexist | unknown | Looks for sexist words and phrases |
 | spell | *unneeded* | Use aspell |
 | spelladd | *unneeded* | aspell allows adding on the fly |

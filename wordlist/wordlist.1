@@ -1,4 +1,4 @@
-TH wordlist 1 "Writer's ScriptBench"
+.TH wordlist 1 "Writer's ScriptBench"
 .SH Name
 wordlist \- output each word on its own line
 .SH Description
@@ -12,13 +12,15 @@ then outputs each word on its own line.
 The
 .I wordlist
 utility replaces the functionality of
-.CW "deroff -w" ,
+.I deroff
+.BR -w" ,
 and extends it to normalize words.
 So instead of using the WWB command
-.CW "deroff -w"
-.I file ,
+.I "deroff
+.B -w"
+.IR file ,
 you instead use
-.CW deroff
+.I deroff
 .I file
 |
-.CW wordlist .
+.IR wordlist .

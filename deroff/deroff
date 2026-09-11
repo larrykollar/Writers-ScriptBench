@@ -1,0 +1,83 @@
+#!/bin/sh
+
+# Use nroff to strip *roff formatting
+# The -m option is required
+# The -w option is not supported, use wordwrap
+
+OPTS=$(getopt -o hsm: -n 'deroff' -- "$@")
+
+if [ $? -ne 0 ]; then
+    echo "Failed to parse options" >&2
+    exit 1
+fi
+
+eval set -- "$OPTS"
+
+while true; do
+    case "$1" in
+        -h)
+            echo "Usage: deroff -m(macropkg) [-s] [files...]" >&2
+            exit 0
+            ;;
+        -m)
+            macropkg=$2
+            shift 2
+            continue
+            ;;
+        -s)
+            rmspaces=1
+            shift
+            continue
+            ;;
+        --)
+            shift
+            break
+            ;;
+        *)
+            echo "Invalid option" >&2
+            echo "Usage: deroff -m(macropkg) [-s] [files...]" >&2
+            exit 1
+            ;;
+    esac
+done
+
+# If it's a package we recognize, turn off hyphenation
+# and adjustment if possible (man and mdoc support it).
+
+if [ ! -z "${macropkg}" ]
+then
+    case $macropkg in
+        s)
+            roffopts="-ms -rHY=0"
+            break
+            ;;
+        m)
+            roffopts="-mm -rHy=0"
+            break
+            ;;
+        an)
+            roffopts="-man -dAD=l -rHY=0"
+            break
+            ;;
+        doc)
+            roffopts="-mdoc -dAD=l -rHY=0"
+            break
+            ;;
+        *)
+            roffopts="-m $macropkg"
+            break
+            ;;
+    esac
+else
+    echo "deroff requires the -m option. Stop." >&2
+    exit 1
+fi
+
+if [ ! -z "${rmspaces}" ]
+then
+    nroff $roffopts "$@" | awk '{sub(/^ +/,""); gsub(/ +/," "); print}'
+else
+    nroff $roffopts "$@"
+fi
+
+unset OPTS macropkg roffopts rmspaces

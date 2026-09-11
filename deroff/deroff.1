@@ -1,0 +1,59 @@
+.TH deroff 1 "Writer's ScriptBench"
+.SH Name
+deroff \- strip *roff markup
+.SH Synopsis
+.I deroff
+.B -h
+.br
+.I deroff
+.B -m
+.I macropkg
+.RB [ -s ]
+.RI [ files... ]
+.SH Description
+The
+.I deroff
+utility uses nroff to strip markup
+from one or more nroff or troff files,
+or standard input if no files are specified.
+.LP
+The
+.B -h
+option
+prints a brief usage message and quits.
+.LP
+The
+.BI -m macropkg
+option is required;
+it selects the macro package used
+to format the files.
+To select the
+.B -ms
+macros, you can specify the option as either
+.B -ms
+or
+.BR "-m s" .
+Depending on the specified macros,
+.I deroff
+attempts to turn off hyphenation
+and full-justification.
+.
+.SH "Differences from WWB"
+The legacy
+.B -w
+option, used to output one word per line,
+is not supported in this version of
+.IR deroff .
+Instead, pipe the output through
+.IR wordlist (1).
+.LP
+Output from
+.B -ms
+and
+.B -mm
+files is fully-justified, unless turned off
+in the file.
+Use the
+.B -s
+option to remove leading spaces
+and multiple spaces between words.
