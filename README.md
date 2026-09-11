@@ -12,17 +12,17 @@ those are all available as released source or ground-up rewrites, or both).
 | Name | Status | Notes |
 |-----|-----|-----|
 | abst | unknown | Abstractness evaluation; ArtsEngine or WordTangible might be replacements |
-| acro | Here (soon) | Acronym check, replacement awk script coming |
+| acro | **Here** | Acronym check |
 | checkmm | **Here** | Requires groff |
 | deroff | **Here** | -w option not supported, pipe to *wordlist* instead |
-| dictadd | unknown | adds to diction & spell dictionaries |
+| dictadd | unknown | Adds to diction & spell dictionaries |
 | diction | Available from [GNU diction](https://www.gnu.org/software/diction/) | Improved but no dictadd |
 | double | *unneeded*, GNU diction does this | Checks for double words |
-| explain | 4.1BSD source available | explains diction's heartburn with certain words |
-| findbe | unknown | "looks for syntax that may be difficult to understand" |
-| morestyle | unknown | "abstract" words, word diversity, negative constructions |
-| org | unknown | prints first & last sentence of each paragraph |
-| punct | unknown | punctuation check (commas, periods in/out of quotes |
+| explain | 4.1BSD source available | Explains diction's heartburn with certain words |
+| findbe | unknown | "Looks for syntax that may be difficult to understand" |
+| morestyle | unknown | "Abstract" words, word diversity, negative constructions |
+| org | unknown | Prints first & last sentence of each paragraph |
+| punct | unknown | Punctuation check (commas, periods in/out of quotes |
 | reuseprep | Here (soon) | **New**, preps text for [reuse analysis](https://github.com/larrykollar/reuse_analyzer) |
 | sexist | unknown | Looks for sexist words and phrases |
 | spell | *unneeded* | Use aspell |

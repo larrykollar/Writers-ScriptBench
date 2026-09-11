@@ -1,0 +1,48 @@
+#!/usr/bin/awk -f
+
+# Show acronyms in context and print counts
+
+BEGIN {
+    # Build exclusion list
+    exclude["A"] = 1
+    exclude["I"] = 1
+    exclude["AN"] = 1
+    exclude["THE"] = 1
+    exclude["HTML"] = 1
+    exclude["README"] = 1
+    # Probably won't appear in a book NOT about *roff
+    exclude["EQ"] = 1; exclude["EN"] = 1
+    exclude["DS"] = 1; exclude["DE"] = 1
+}
+
+/^\.[A-Z]/ {
+    # remove macro calls that look like acronyms
+    sub(/\.[A-Z][^ ]*/, "")
+    sub(/ \.[A-Z]+/, "")
+}
+
+{
+    for (i = 1; i <= NF; i++) {
+        token = $i
+
+        gsub(/^[^[:alnum:]]+/, "", token)
+        gsub(/[^[:alnum:].&\/-]+$/, "", token)
+
+        if (exclude[token])
+            continue
+
+        # print acronym in context with its line
+        if (token ~ /^[A-Z][A-Z0-9&\/-]+$/ ||
+            token ~ /^([A-Z]\.){2,}$/) {
+            print FNR ":" token
+            count[token]++
+        }
+    }
+}
+
+END {
+    # print count of acronyms
+    print "\n\n--------------\nAcronym counts:"
+    for (token in count)
+        print count[token], token
+}
