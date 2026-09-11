@@ -1,6 +1,6 @@
 # Writer's ScriptBench
 Scripts to mostly duplicate the function of missing or lost Writer's Workbench (WWB) utilities.
-A couple of new scripts replace or extend functionality.
+Some new scripts replace or extend functionality.
 
 Some WWB utilities were rewritten from scratch with public licenses.
 Others have original source available on TUHS, with uncertain licensing.
@@ -18,8 +18,9 @@ those are all available as released source or ground-up rewrites, or both).
 | dictadd | unknown | Adds to diction & spell dictionaries |
 | diction | Available from [GNU diction](https://www.gnu.org/software/diction/) | Improved but no dictadd |
 | double | *unneeded*, GNU diction does this | Checks for double words |
-| explain | 4.1BSD source available | Explains diction's heartburn with certain words |
+| explain | 4.1BSD source available | Explains diction's heartburn with certain phrases |
 | findbe | unknown | "Looks for syntax that may be difficult to understand" |
+| hyphen | Here (soon) | Shows hyphenated words from nroff output |
 | morestyle | unknown | "Abstract" words, word diversity, negative constructions |
 | org | unknown | Prints first & last sentence of each paragraph |
 | punct | unknown | Punctuation check (commas, periods in/out of quotes |
@@ -33,15 +34,14 @@ those are all available as released source or ground-up rewrites, or both).
 | syl | *unneeded* | Average number of syllables per word (supported in GNU style) |
 | wordlist | **Here** | **New**, replaces -w option in WSB deroff |
 
-Of all these, deroff is the most frustrating.
+Of all these, deroff was the most frustrating.
 GNU has a version, but it produces garbled output.
-A version on GitHub compiles (with some help) but produces **no** output.
+A BSD version on GitHub compiles (with some help) but produces **no** output.
 So the WSB version calls nroff (turning off hyphenation on the command line)
 to strip the markup.
 
-Most of the WSB utilities work a little differently
+Most of the WSB utilities work differently
 from their WWB counterparts.
 Check the manual page
 for each utility, especially if you're familiar with the original
 and want to see what's different.
-
