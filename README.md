@@ -1,12 +1,13 @@
 # Writer's ScriptBench
-Scripts to mostly duplicate the function of missing or lost Writer's Workbench (WWB) utilities.
+Scripts to mostly duplicate the function
+of missing or lost Writer's Workbench (WWB) utilities.
 Some new scripts replace or extend functionality.
 
 Some WWB utilities were rewritten from scratch with public licenses.
 Others have original source available on TUHS, with uncertain licensing.
 A few come from the BSD side.
 Here's the list of utilities I'm aware of
-(excluding formatters, macros, preprocessors, and postprocessors;
+(excluding formatters, macro packages, preprocessors, and postprocessors;
 those are all available as released source or ground-up rewrites, or both).
 
 | Name | Status | Notes |
@@ -17,13 +18,15 @@ those are all available as released source or ground-up rewrites, or both).
 | deroff | **Here** | -w option not supported, pipe to *wordlist* instead |
 | dictadd | unknown | Adds to diction & spell dictionaries |
 | diction | Available from [GNU diction](https://www.gnu.org/software/diction/) | Improved but no dictadd |
+| diversity | Here (maybe) | Word diversity — vibe-coded replacement |
 | double | *unneeded*, GNU diction does this | Checks for double words |
 | explain | *unneeded* | GNU diction does this with the -s (or --suggest) option |
-| findbe | unknown | "Looks for syntax that may be difficult to understand" |
+| findbe | Here (maybe) | "Looks for syntax that may be difficult to understand" — vibe-coded replacement |
 | hyphen | **Here** | Shows hyphenated words in *nroff* output |
-| morestyle | unknown | "Abstract" words, word diversity, negative constructions |
+| morestyle | unknown | Runs abst, diversity, neg |
+| neg | Here (maybe) | Negative constructions — vibe-coded replacment |
 | org | unknown | Prints first & last sentence of each paragraph |
-| punct | unknown | Punctuation check (commas, periods in/out of quotes |
+| punct | Here (maybe) | Punctuation check — vibe-coded replacement |
 | reuseprep | Here (soon) | **New**, preps text for [reuse analysis](https://github.com/larrykollar/reuse_analyzer) |
 | sexist | unknown | Looks for sexist words and phrases |
 | spell | *unneeded* | Use aspell |
