@@ -4,8 +4,8 @@
 # Usage: nroff [options] file | [me]
 
 BEGIN {
-broken = 0 # true if previous line ended with a hyphen
-stem = ""  # keep the last word on the line if it ends with a hyphen
+  broken = 0 # true if previous line ended with a hyphen
+  stem = ""  # keep the last word on the line if it ends with a hyphen
 }
 
 # If previous line had its last word hyphenated,
