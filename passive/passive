@@ -1,0 +1,4 @@
+#!/bin sh
+#
+# Locate simple passive phrases like "is modified"
+grep -En '(is|are|was|were)( not)? [a-z]+ed $*
